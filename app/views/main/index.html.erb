@@ -1,0 +1,11 @@
+<h1>Personalized Shopping</h1>
+<h2>Take the style quiz</h2>
+
+
+<h2>These are all the products</h2>
+<% @all_products.each do |p| %>
+  <a href="<%= p.product_url %>">
+    <img src="<%= p.image_url %>" height="300">
+  </a>
+  <%= p.tags[0].name if p.tags[0] != nil %>
+<% end %>
