@@ -1,6 +1,9 @@
 <h1>Personalized Shopping</h1>
-<h2>Take the style quiz</h2>
 
+<h2>User Color Preferences</h2>
+<% @user.color_preference.attributes.each do |key, value| %>
+	<%= key %>: <%= value %><br>
+<% end %>
 
 <h2>These are all the products</h2>
 <% @all_products.each do |p| %>

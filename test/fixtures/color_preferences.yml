@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  black: MyString
+  grey: MyString
+  white: MyString
+  beige: MyString
+  silver: MyString
+  gold: MyString
+  purple: MyString
+  blue: MyString
+  green: MyString
+  yellow: MyString
+  orange: MyString
+  pink: MyString
+  red: MyString
+  multi: MyString
+
+two:
+  user: two
+  black: MyString
+  grey: MyString
+  white: MyString
+  beige: MyString
+  silver: MyString
+  gold: MyString
+  purple: MyString
+  blue: MyString
+  green: MyString
+  yellow: MyString
+  orange: MyString
+  pink: MyString
+  red: MyString
+  multi: MyString

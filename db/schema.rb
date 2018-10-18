@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_18_042409) do
+ActiveRecord::Schema.define(version: 2018_10_18_221637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "color_preferences", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "black"
+    t.string "grey"
+    t.string "white"
+    t.string "beige"
+    t.string "silver"
+    t.string "gold"
+    t.string "purple"
+    t.string "blue"
+    t.string "green"
+    t.string "yellow"
+    t.string "orange"
+    t.string "pink"
+    t.string "red"
+    t.string "multi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_color_preferences_on_user_id"
+  end
 
   create_table "product_tags", force: :cascade do |t|
     t.bigint "product_id"
@@ -54,6 +75,7 @@ ActiveRecord::Schema.define(version: 2018_10_18_042409) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "color_preferences", "users"
   add_foreign_key "product_tags", "products"
   add_foreign_key "product_tags", "tags"
   add_foreign_key "tags", "tag_types"
